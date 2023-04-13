@@ -14,8 +14,8 @@ router.post('/remove', UserController.removeUser)
 router.get('/allUsers', UserController.allUsers)
 router.get('/', UserController.home)
 
-// router.use(function(req, res){
-//   res.status(404).render('404')
-// })
+router.use(function(req, res){
+  res.status(404).render('404')
+})
 
 module.exports = router

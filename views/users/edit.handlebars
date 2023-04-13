@@ -1,35 +1,75 @@
-<h1>Edit User {{user.nome}} </h1>
+<div class="formUser">
+  <div class="title2">
+    <h1>Edit User {{user.nome}} </h1>
+    <a href="/users" class="btn">
+      <i class="bi bi-house"></i> Home
+    </a>
+  </div>
 
-<div class="black_view">
+  <form action="/users/edit" method="post" class="row">
 
-  <form action="/users/edit" method="post" class="row m-3">
+    <div class="">
+      <div class="row">
+        <div class="col">
+          <input type="hidden" name="id" value="{{user.id}}">
 
-    <div class="row align-items-start">
-      <input type="hidden" name="id" value="{{user.id}}">
-      <div class="col-md-6">
-        <label for="nome" class="form-label">Nome:</label>
-        <input type="text" name="nome" value="{{user.nome}}" class="form-control" />
+          <label for="nome" class="form-label">Nome:</label>
+          <input type="text" name="nome" value="{{user.nome}}" class="form-control" />
+        </div>
       </div>
-    </div>
-
-    <div class="row align-items-start">
-      <div class="col-md-4">
-        <label for="idade" class="form-label">Função:</label>
-        <input type="text" name="idade" value="{{user.funcao}}" class="form-control" />
+      <div class="row">
+        <div class="col">
+          <label for="funcao" class="form-label">Função:</label>
+          <input type="text" name="funcao" value="{{user.funcao}}" class="form-control" />
+        </div>
       </div>
-    </div>
-
-    <div class="row align-items-start">
-      <div class="col-md-4">
-        <label for="idade" class="form-label">Salário:</label>
-        <input type="text" name="idade" value="{{user.salario}}" class="form-control" />
+      <div class="row">
+        <div class="col">
+          <label for="salario" class="form-label">Salário:</label>
+          <input type="number" name="salario" value="{{user.salario}}" class="form-control" />
+        </div>
       </div>
-    </div>
-
-    <div class="col-sm-2">
-      <input type="submit" value="Atualizar" class="btn">
+      <div class="col botoes">
+        <a href="/users/allUsers" class="btn">
+          Voltar
+        </a>
+        <input type="submit" value="Atualizar" class="btn">
+      </div>
     </div>
 
   </form>
 
+  {{!-- <div class="black_view">
+
+    <form action="/users/edit" method="post" class="row m-3">
+
+      <div class="row align-items-start">
+        <input type="hidden" name="id" value="{{user.id}}">
+        <div class="col-md-6">
+          <label for="nome" class="form-label">Nome:</label>
+          <input type="text" name="nome" value="{{user.nome}}" class="form-control" />
+        </div>
+      </div>
+
+      <div class="row align-items-start">
+        <div class="col-md-4">
+          <label for="funcao" class="form-label">Função:</label>
+          <input type="text" name="funcao" value="{{user.funcao}}" class="form-control" />
+        </div>
+      </div>
+
+      <div class="row align-items-start">
+        <div class="col-md-4">
+          <label for="salario" class="form-label">Salário:</label>
+          <input type="number" name="salario" value="{{user.salario}}" class="form-control" />
+        </div>
+      </div>
+
+      <div class="col-sm-2">
+        <input type="submit" value="Atualizar" class="btn">
+      </div>
+
+    </form>
+
+  </div> --}}
 </div>

@@ -10,19 +10,83 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
-.container {
+.home {
   background-color: #fff;
-  padding: 15px 20px;
+  padding: 15px 25px;
   border-radius: 10px;
 }
 
-.title {
+.home .botoes {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 25px;
+  border-top: 2px solid #020e26;
+  padding-bottom: 10px;
+}
+
+.formUser {
+  background-color: #fff;
+  padding: 15px 25px;
+  border-radius: 10px;
+  min-width: max-content;
+}
+
+.formUser .row .col {
+  margin: 10px 0;
+}
+
+.formUser .botoes {
+  display: flex;
+  justify-content: space-around;
+}
+/* 
+.addUsers {
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.addUsers h1 {
+  border-bottom: 2px solid #020e26;
+  margin-bottom: 20px;
+}
+
+.addUsers form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 80%;
+} */
+
+.container {
+  background-color: #fff;
+  padding: 15px 25px;
+  border-radius: 10px;
+}
+
+.container .title {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 15px;
+}
+
+.container .title div {
+  display: flex;
+  gap: 20px;
+}
+
+.title2 {
+  display: flex;
+  align-items: center;
+  gap: 30px;
 }
 
 ul {
@@ -43,4 +107,25 @@ ul.usuarios li {
   text-decoration: none;
   background-color: #020e26;
   color: #fff;
+  transition: .3s;
+}
+
+.btn:hover {
+  color: #fff;
+  transform: scale(1.1);
+  background-color: #062158;
+}
+
+.aviso_404 {
+  background-color: #fff;
+  padding: 15px 25px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.aviso_404 a {
+  width: 80%;
+  background-color: rgb(129, 6, 6);
 }

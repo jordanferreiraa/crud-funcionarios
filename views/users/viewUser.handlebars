@@ -1,115 +1,65 @@
-<div class="title">
-  <h1>Todos os Funcionários</h1>
-  <div> 
-    <a href="/users" class="btn">Home</a>
-    <a href="/users/add" class="btn">Adicionar Funcionário</a>
-  </div>
-</div>
-
-<div class="container text-center info-title">
-  <div class="row">
-    <div class="col">
-      Nome
-    </div>
-    <div class="col">
-      Função
-    </div>
-    <div class="col">
-      Salário
-    </div>
-    <div class="col">
-      Editar
-    </div>
-    <div class="col">
-      Excluir
+<div class="container">
+  <div class="title">
+    <h1>Todos os Funcionários</h1>
+    <div> 
+      <a href="/users" class="btn"><i class="bi bi-house"></i>  Home</a>
+      <a href="/users/add" class="btn">
+        <i class="bi bi-plus-square"></i> Adicionar Funcionário
+      </a>
     </div>
   </div>
-</div>
 
-<ul class="usuarios">
-  {{#each users}}
-
-    {{!-- <li>
-      <div>
-        <label for="">{{this.nome}}</label>
-      </div>
-
-      <div>
-        <label for="">{{this.funcao}}</label>
-      </div>
-
-      <div>
-        <label for="">{{this.salario}}</label>
-      </div>
-
-      <div>
-        <a href="/users/edit/{{this.id}}">
-          <i class="bi bi-pencil"></i>
-        </a>
-      </div>
-
-      <div>
-        <form action="/users/remove" method="post">
-          <input type="hidden" name="id" value="{{this.id}}">
-          <button type="submit">
-            <i class="bi bi-trash3"></i>
-          </button>
-        </form>
-      </div>
-    </li> --}}
-
-    {{!-- <li>
-      <div class="info">
-        <label for="">{{this.nome}}</label>
-        <label for="">{{this.funcao}}</label>
-        <label for="">{{this.salario}}</label>
-      </div>
-
-      <div class="itens">
-        <a href="/users/edit/{{this.id}}">
-          <i class="bi bi-pencil"></i>
-        </a>
-        
-        <form action="/users/remove" method="post">
-          <input type="hidden" name="id" value="{{this.id}}">
-          <button type="submit">
-            <i class="bi bi-trash3"></i>
-          </button>
-        </form>
-      </div>
-    </li> --}}
-  <li>
-  <div class="container text-center">
+  <div class="container text-center info-title">
     <div class="row">
       <div class="col">
-        <label for="">{{this.nome}}</label>
+        Nome
       </div>
       <div class="col">
-        <label for="">{{this.funcao}}</label>
+        Função
       </div>
       <div class="col">
-        <label for="">{{this.salario}}</label>
+        Salário
       </div>
       <div class="col">
-        <a href="/users/edit/{{this.id}}">
-          <i class="bi bi-pencil"></i>
-        </a>
+        Editar
       </div>
       <div class="col">
-        <form action="/users/remove" method="post">
-          <input type="hidden" name="id" value="{{this.id}}">
-          <button type="submit">
-            <i class="bi bi-trash3"></i>
-          </button>
-        </form>
+        Excluir
       </div>
     </div>
   </div>
-  </li>
 
-  {{/each}}
-</ul>
-
-
+  <ul class="usuarios">
+    {{#each users}}
+      <li>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col">
+              <label for="">{{this.nome}}</label>
+            </div>
+            <div class="col">
+              <label for="">{{this.funcao}}</label>
+            </div>
+            <div class="col">
+              <label for="">{{this.salario}}</label>
+            </div>
+            <div class="col">
+              <a href="/users/edit/{{this.id}}">
+                <i class="bi bi-pencil"></i>
+              </a>
+            </div>
+            <div class="col">
+              <form action="/users/remove" method="post">
+                <input type="hidden" name="id" value="{{this.id}}">
+                <button type="submit">
+                  <i class="bi bi-trash3"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </li>
+    {{/each}}
+  </ul>
 
 </div>
