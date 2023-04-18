@@ -43,27 +43,6 @@ body {
   display: flex;
   justify-content: space-around;
 }
-/* 
-.addUsers {
-  background-color: #fff;
-  padding: 25px 30px;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.addUsers h1 {
-  border-bottom: 2px solid #020e26;
-  margin-bottom: 20px;
-}
-
-.addUsers form {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  width: 80%;
-} */
 
 .container {
   background-color: #fff;
